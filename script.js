@@ -1,6 +1,7 @@
         //get dom element
         const categorySelect = document.getElementById("category");   
         const mealContainer = document.getElementById("random-meal");
+        const category = document.getElementById("category")
 
         //fetch and populate categories in the dropdown
          async function chooseCategories(){
@@ -30,7 +31,7 @@
         // fetch and display a random meal (option by category)
         async function loadNewMeal(){
           mealContainer.innerHTML = "Loading new recipe..."
-          const category = document.getElementById("category").value
+          const category  = categorySelect.value;
           let url = "https://www.themealdb.com/api/json/v1/1/random.php";
 
           if(category){
@@ -39,7 +40,7 @@
             const meals = list.meals;
 
             if(!meals || meals.length === 0){
-              mealContainer.innerHTML = `<p> No reciprs found </p>`
+              mealContainer.innerHTML = `<p> No recipes found </p>`
               return;
             }
 

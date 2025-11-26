@@ -25,7 +25,7 @@
           cursor: pointer;
           border: none;
           max-width: 300px;
-          margin-top: 10px;
+          margin: 10px auto;
 
         }
         #random-meal img{
