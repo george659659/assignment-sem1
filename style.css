@@ -1,0 +1,63 @@
+        body{
+          font-family: "Fredoka", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 436;
+          font-style: normal;
+          font-variation-settings:"wdth" 109.6;;
+          padding:20px;
+          margin:0;
+          text-align: center;
+          
+        }
+        
+        h1{
+          color:forestgreen;
+          margin-bottom: 30px;
+          font-size: 2em;
+        }
+        #new-meal{
+          padding:12px 24px;
+          margin-bottom: 20px auto;
+          background-color: #007bff;
+          color:white;
+          font-size: 16px;
+          border-radius: 8px;
+          cursor: pointer;
+          border: none;
+          max-width: 300px;
+          margin-top: 10px;
+
+        }
+        #random-meal img{
+          max-width: 100%;
+          border-radius: 8px;
+          margin: 20 0;
+        }
+        ul,ol{
+          margin: 20px;
+          text-align: left;
+          line-height: 1.6;
+        }
+
+         #random-meal {
+         max-width: 750px;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: antiquewhite;
+         border-radius: 12px;
+        }
+        #category {
+         padding: 10px 15px;
+         font-size: 1em;
+         font-family: 'Fredoka', sans-serif;
+         color: #4CAF50; 
+         border-radius: 8px;
+         background-color: #e8f5e9; 
+         cursor: pointer;
+         border:none
+        }
+        footer{
+          width:100%;
+        }
+        
+
