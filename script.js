@@ -1,18 +1,25 @@
         //get dom element
+        const homeContent = document.getElementById("home");
+        const recipeview = document.getElementById("recipe-view");
+        const startButton = document.getElementById("start-button");
+
+        //event listener for start button
         const categorySelect = document.getElementById("category");   
         const mealContainer = document.getElementById("random-meal");
-        const category = document.getElementById("category")
+        const newMealButton = document.getElementById("new-meal");
+
+        //function to start the recipe app
+        function startRecipeApp(){
+          homeContent.classList.add("hidden"); 
+          recipeview.classList.remove("hidden");
+          loadNewMeal();
+        }
 
         //fetch and populate categories in the dropdown
          async function chooseCategories(){
-          const requestOptions = {
-             method: "GET",
-             redirect: "follow"
-          };
-
-          fetch("https://www.themealdb.com/api/json/v1/1/categories.php", requestOptions)
-           .then((response) => response.json())
-           .then((result) =>{
+          try{
+          const respone = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
+           const result = await respone.json()
             const categories = result.categories
 
             if(categories){
@@ -25,8 +32,9 @@
                 categorySelect.appendChild(option)
               }
             }
-           })
-           .catch((error) => console.error(error));
+           }catch(error) {
+            console.error("Category load error", error);
+          }
         }
         // fetch and display a random meal (option by category)
         async function loadNewMeal(){
@@ -53,6 +61,7 @@
                 const response = await fetch(url);
                 const result = await response.json();
                 const meal = result.meals[0];
+
                 const category = meal.strCategory;
                 const area =meal.strArea;
 
@@ -96,9 +105,11 @@
     } 
   }
   //load categories and first random meal initialize
-  chooseCategories();
-  loadNewMeal();
+if(startButton) startButton.addEventListener("click", startRecipeApp);
 
-  //event listeners for button click and category select
-  document.getElementById("new-meal").addEventListener("click", loadNewMeal);
-  categorySelect.addEventListener("change", loadNewMeal);
+if(newMealButton) newMealButton.addEventListener("click", loadNewMeal);
+if(categorySelect) categorySelect.addEventListener("change", loadNewMeal);
+
+document.addEventListener("DOMContentLoaded", () => {
+  chooseCategories();
+});

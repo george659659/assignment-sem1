@@ -12,6 +12,23 @@
 
   </head>
   <body>
+    <div id ="home" class = "view">
+      <div class = "home-content">
+        <h1>Digital Wellness</h1>
+        <p>Promoting a balanced lifestyle through mindful technology use and healthy habits.</p>
+        <div class ="feature-list">
+          <p>Get Random Recipes</p>
+          <p>Ingredients Measurement</p>
+          <p>Real-time Nutrition Information</p>
+          <p>Clear and Concise Instructions</p>
+      </div>
+      <button id = "start-button">
+        Get Started
+      </button>
+      </div>
+    </div>
+
+    <div id ="recipe-view" class = "view hidden">
     <header>
        <h1>Fun Random Recipes That Balance Flavor and Health</h1>
       <p>This website is designed to promote Digital Wellness. With just a click, you can receive a complete, randomly generated recipe that encourages home cooking and helps you develop healthy eating habits.</p>
@@ -19,7 +36,7 @@
       <div>
         <label for = "category">Choose a category:</label>
         <select id ="category">
-          <option value = "">ALL</option>
+          <option value = "">All</option>
         </select>
       </div>
 
@@ -28,7 +45,7 @@
       <article id ="random-meal"></article>
 
     <footer>
-        <p>&copy; 2025 Promotion Digital Wellnes throught Home Cooking. Data powered by TheMealDB API.</p>
+        <h4>&copy; 2025 Promotion Digital Wellnes throught Home Cooking. Data powered by TheMealDB API.</h4>
     </footer>
 
     <script src ="script.js"></script>
