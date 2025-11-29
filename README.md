@@ -46,6 +46,26 @@ asssignment-sem1/\
 |---README.md\
 |---background1.jpg
 
+# Testing Plan
+
+## Objectives
+This testing plan is designed to verify that the "Digital Wellness Recipe Generator" application is fully functional, reliable, and provides a smooth user experience, meeting the required standards for Technical Quality and minimizing bugs.
+
+## Testing Scope
+1.Functional Testing
+Verifying core interactions, including view transitions, button clicks, and dropdown menu changes, work as intended.
+
+2.API Integration Testing
+Ensuring recipe data is successfully fetched, parsed, and displayed accurately from the TheMealDB API.
+
+3.Robustness Testing
+Handling edge cases like loading states, error responses, and no-recipe scenarios gracefully.
+
+4.Cross-Browser/Responsiveness
+Validating layout and functionality across different devices and major web browsers.
+
+
+
 
 
 
